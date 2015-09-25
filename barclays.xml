@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf8" ?>
+<extension type="plugin" version="3.1" method="upgrade" group="hikashoppayment">
+	
+	<name>ePDQ for Hikashop</name>
+	<creationDate>February 2014</creationDate>
+	<version>3.2.0</version>
+	<author>James L. Lendrem</author>
+	<authorEmail>J.l.lendrem@smoothlines.net</authorEmail>
+	<authorUrl>http://smoothlines.net</authorUrl>
+	<copyright>Copyright (C) {__YEAR__} SMOOTH LINES - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>This plugin allows you to integrate with Barclay's ePDQ for payment</description>
+	
+	<updateservers>
+	
+		<server type="extension" name="ePDQ for HikaShop" priority="1">http://smoothlines.net/epdq_for_hikashop_update.xml</server>
+	
+	</updateservers>
+	
+	<files>
+	
+		<filename plugin="barclays">barclays.php</filename>
+		<filename>barclays_end.php</filename>
+		<filename>barclays_configuration.php</filename>
+		<filename>LICENSE.txt</filename>
+	
+	</files>
+	
+	<params addpath="components/com_hikashop/params">
+	
+		<param name="pluginoptions" type="pluginoptions" default="plugin" label="hikashop" description="Hikashop Options" />
+	
+	</params>
+	
+	<config>
+	
+		<fields name="params" addfieldpath="components/com_hikashop/fields">
+		
+			<fieldset name="basic">
+			
+				<field id="pluginoptions" name="pluginoptions" type="pluginoptions" label="hikashop" description="Hikashop Options" />
+				
+			</fieldset>
+			
+		</fields>
+	
+	</config>
+
+</extension>
